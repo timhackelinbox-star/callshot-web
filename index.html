@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Callshot: Tippen gegen deine Freunde</title>
+<meta name="description" content="Callshot ist ein kostenloses Fußball-Tippspiel für Freundesgruppen. Tippe Ja oder Nein, sammle Calls, führe die Rangliste an.">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0d1117">
+<link rel="icon" type="image/png" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png">
+<style>
+  :root { --bg:#0d1117; --surface:#151a22; --ink:#f5f5f0; --body:#d9dcd6;
+          --soft:#a4acb6; --line:#262d38; --lime:#c8f060; }
+  * { box-sizing:border-box; }
+  html { color-scheme:dark; }
+  body { margin:0; background:var(--bg); color:var(--ink);
+         font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; }
+  .wrap { max-width:44rem; margin:0 auto; padding:3rem 1rem 4.5rem; }
+  .mark { display:inline-flex; align-items:center; gap:.65rem; margin-bottom:2.75rem;
+          text-decoration:none; color:var(--ink); }
+  .mark svg { width:30px; height:30px; display:block; }
+  .mark span { font-weight:600; letter-spacing:-.01em; }
+  h1 { font-size:1.9rem; line-height:1.2; letter-spacing:-.02em; margin:0 0 .4rem; }
+  .stand { color:var(--soft); font-size:.9rem; margin:0 0 2.25rem; }
+  h2 { font-size:1.1rem; margin:2.5rem 0 .7rem; letter-spacing:-.01em; }
+  h3 { font-size:1rem; margin:1.6rem 0 .4rem; }
+  p, li, td { color:var(--body); }
+  ul { padding-left:1.2rem; }
+  li { margin:.35rem 0; }
+  a { color:var(--lime); text-underline-offset:2px; }
+  .box { border-left:3px solid var(--lime); background:var(--surface);
+         padding:.6rem 1rem; margin:1.4rem 0; border-radius:0 6px 6px 0; }
+  .box p { margin:.4rem 0; }
+  table { border-collapse:collapse; width:100%; margin:1rem 0; font-size:.95rem; }
+  th, td { text-align:left; padding:.55rem .6rem; border-bottom:1px solid var(--line);
+           vertical-align:top; }
+  th { color:var(--soft); font-weight:600; width:32%; }
+  footer { margin-top:3.5rem; padding-top:1.5rem; border-top:1px solid var(--line);
+           color:var(--soft); font-size:.9rem; display:flex; flex-wrap:wrap; gap:.4rem 1.2rem; }
+  p, li, td { -webkit-hyphens:auto; hyphens:auto; }
+  @media (max-width:560px) {
+    h1 { font-size:1.6rem; }
+    table, tbody, tr, th, td { display:block; width:auto; }
+    tr { padding:.7rem 0; border-bottom:1px solid var(--line); }
+    th, td { border:0; padding:.1rem 0; }
+    th { width:auto; font-size:.85rem; text-transform:uppercase; letter-spacing:.04em; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="mark" href="./"><svg viewBox="12 12 76 76" aria-hidden="true"><path fill="#c8f060" d="M80.67 70.69A37 37 0 1 1 80.67 29.31L71.14 35.74A25.5 25.5 0 1 0 71.14 64.26Z"/><circle cx="50" cy="50" r="11.5" fill="#f5f5f0"/></svg><span>Callshot</span></a>
+
+<h1>Callshot</h1>
+<p class="stand">Tippen gegen deine Freunde</p>
+
+<p>Jede Woche ein paar Fragen zu den kommenden Spielen: Fallen mehr als 2,5 Tore? Treffen
+beide Teams? Du antwortest mit Ja oder Nein. Liegst du richtig, bekommst du Punkte, und zwar
+umso mehr, je unwahrscheinlicher deine Antwort war.</p>
+
+<h2>So läuft es</h2>
+<ul>
+  <li>Liga erstellen oder mit einem Code beitreten. Callshot spielt man in kleinen Runden.</li>
+  <li>Vor Anpfiff tippen. Was die anderen getippt haben, siehst du erst, wenn das Spiel läuft.</li>
+  <li>Nach Abpfiff werden die Ergebnisse automatisch ausgewertet und die Rangliste aktualisiert.</li>
+</ul>
+
+<div class="box">
+  <p>Kein Geldeinsatz, keine Gewinne, keine Wetten. Callshot ist ein reines Spiel um Punkte
+  und den ersten Platz in der Runde.</p>
+</div>
+
+<h2>Hilfe und Kontakt</h2>
+<p>Etwas funktioniert nicht, du hast eine Frage zum Spiel, oder ein Benutzername in der App ist
+unangemessen? Schreib uns an <a href="mailto:tim.hackel.inbox@gmail.com">tim.hackel.inbox@gmail.com</a>. Wir antworten in der Regel
+innerhalb weniger Tage.</p>
+
+<h2>Konto löschen</h2>
+<p>Du kannst dein Konto jederzeit selbst löschen: in der App das Profil öffnen, ganz nach unten
+scrollen, „Konto löschen“. Profil, Tipps und Liga-Mitgliedschaften werden dabei unwiderruflich
+entfernt.</p>
+
+<footer>
+  <a href="./">Start</a>
+  <a href="datenschutz.html">Datenschutz</a>
+  <a href="nutzungsbedingungen.html">Nutzungsbedingungen</a>
+  <a href="impressum.html">Impressum</a>
+</footer>
+</div>
+</body>
+</html>
