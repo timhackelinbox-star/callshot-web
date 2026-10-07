@@ -13,6 +13,8 @@
   :root { --bg:#0d1117; --surface:#151a22; --ink:#f5f5f0; --body:#d9dcd6;
           --soft:#a4acb6; --line:#262d38; --lime:#c8f060; }
   * { box-sizing:border-box; }
+  [hidden] { display:none !important; }
+  #hinweis { margin:-1rem 0 2rem; }
   html { color-scheme:dark; }
   body { margin:0; background:var(--bg); color:var(--ink);
          font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; }
@@ -124,9 +126,11 @@ Art. 28 DSGVO erforderlichen Verträge zur Auftragsverarbeitung.</p>
 <table>
   <tr>
     <th>Supabase</th>
-    <td>Datenbank und Anmeldedienst. Deine Konto- und Spieldaten liegen auf Servern in
-        <strong>Frankfurt am Main</strong>. Vertragspartner ist die Supabase Pte. Ltd., Singapur;
-        für Übermittlungen außerhalb der EU gelten die EU-Standardvertragsklauseln.</td>
+    <td>Datenbank und Anmeldedienst. Deine Konto- und Spieldaten werden auf Servern in
+        <strong>Frankfurt am Main</strong> gespeichert. Vertragspartner ist die Supabase Pte. Ltd.,
+        Singapur. Supabase setzt weitere Unterauftragsverarbeiter ein, etwa Cloudflare für die
+        Netzwerkanbindung; sie sind über den Vertrag mit Supabase gebunden. Für Übermittlungen
+        außerhalb der EU gelten die EU-Standardvertragsklauseln.</td>
   </tr>
   <tr>
     <th>Resend</th>
@@ -156,7 +160,9 @@ einer sicheren Bereitstellung der Website). Für Übermittlungen in die USA nimm
 Data Privacy Framework teil und nutzt ergänzend die EU-Standardvertragsklauseln. Wie lange die
 Protokolle gespeichert werden, regelt die Datenschutzerklärung von GitHub.</p>
 <p>Die Website setzt keine Cookies, lädt keine Schriften oder Skripte von Dritten und verwendet
-keine Analyse-Werkzeuge.</p>
+keine Analyse-Werkzeuge. Die Startseite enthält ein kleines eigenes Skript: Kommst du über den
+Bestätigungslink aus unserer E-Mail, zeigt es einen Hinweis an und entfernt die technischen
+Anmeldedaten aus der Adresszeile. Es läuft nur in deinem Browser und sendet keine Daten.</p>
 
 <h2>7. Kein Tracking, keine Werbung</h2>
 <ul>

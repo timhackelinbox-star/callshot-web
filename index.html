@@ -13,6 +13,8 @@
   :root { --bg:#0d1117; --surface:#151a22; --ink:#f5f5f0; --body:#d9dcd6;
           --soft:#a4acb6; --line:#262d38; --lime:#c8f060; }
   * { box-sizing:border-box; }
+  [hidden] { display:none !important; }
+  #hinweis { margin:-1rem 0 2rem; }
   html { color-scheme:dark; }
   body { margin:0; background:var(--bg); color:var(--ink);
          font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; }
@@ -52,6 +54,7 @@
 <div class="wrap">
 <a class="mark" href="./"><svg viewBox="12 12 76 76" aria-hidden="true"><path fill="#c8f060" d="M80.67 70.69A37 37 0 1 1 80.67 29.31L71.14 35.74A25.5 25.5 0 1 0 71.14 64.26Z"/><circle cx="50" cy="50" r="11.5" fill="#f5f5f0"/></svg><span>Callshot</span></a>
 
+<div class="box" id="hinweis" hidden><p id="hinweis-text"></p></div>
 <h1>Callshot</h1>
 <p class="stand">Tippen gegen deine Freunde</p>
 
@@ -80,6 +83,24 @@ innerhalb weniger Tage.</p>
 <p>Du kannst dein Konto jederzeit selbst löschen: in der App das Profil öffnen, ganz nach unten
 scrollen, „Konto löschen“. Profil, Tipps und Liga-Mitgliedschaften werden dabei unwiderruflich
 entfernt.</p>
+
+<script>
+/* Landeseite nach dem Bestätigungslink aus der Registrierungsmail (Supabase "Site URL").
+   Supabase haengt Sitzungsdaten (#access_token=..., bzw. ?code=...) oder einen Fehler an.
+   Wir zeigen nur einen Hinweis und entfernen die Daten sofort aus der Adresszeile.
+   Es wird nichts gespeichert oder gesendet. */
+(function () {
+  var raw = location.hash.slice(1) + "&" + location.search.slice(1);
+  if (!/access_token=|code=|type=|error/.test(raw)) return;
+  var ok = !/error/.test(raw);
+  document.getElementById("hinweis-text").textContent = ok
+    ? "Deine E-Mail-Adresse ist bestätigt. Öffne jetzt Callshot und melde dich an."
+    : "Dieser Link ist abgelaufen oder wurde schon benutzt. Öffne Callshot und melde dich an. "
+      + "Klappt das nicht, schreib uns an tim.hackel.inbox@gmail.com.";
+  document.getElementById("hinweis").hidden = false;
+  history.replaceState(null, "", location.pathname);
+})();
+</script>
 
 <footer>
   <a href="./">Start</a>
